@@ -511,9 +511,20 @@
 
       .download-actions {
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-end;
         gap: 10px;
-        flex-wrap: wrap;
+      }
+
+      /* Petite note discrète sous le bouton "Télécharger" */
+      .download-note {
+        margin: 0;
+        max-width: 260px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--muted-2);
+        opacity: 0.75;
+        text-align: right;
       }
 
       footer {
@@ -563,7 +574,10 @@
           white-space: normal;
         }
         .download-actions {
-          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        .download-note {
+          text-align: left;
         }
         nav .nav-link {
           display: none;
@@ -706,11 +720,16 @@
 
         .download-actions {
           width: 100%;
-          justify-content: center;
+          align-items: center;
         }
 
         .download-actions .btn {
           width: 100%;
+        }
+
+        .download-note {
+          text-align: center;
+          max-width: 100%;
         }
 
         .footer-inner {
@@ -738,7 +757,7 @@
         <nav aria-label="Navigation">
           <a
             class="btn btn-primary"
-            href="https://github.com/SKYL4ST/Obumi/releases/download/v1.0.0/Obumi.Setup.1.0.0.exe"
+            href="https://github.com/SKYL4ST/Obumi/releases/download/v1.0.0/Obumi.zip"
             rel="noopener noreferrer"
             aria-label="Télécharger Obumi pour Windows (installateur .exe)"
           >
@@ -771,7 +790,7 @@
             <div class="cta-row">
               <a
                 class="btn btn-primary"
-                href="https://github.com/SKYL4ST/Obumi/releases/download/v1.0.0/Obumi.Setup.1.0.0.exe"
+                href="https://github.com/SKYL4ST/Obumi/releases/download/v1.0.0/Obumi.zip"
                 rel="noopener noreferrer"
                 aria-label="Télécharger Obumi pour Windows (installateur .exe)"
               >
@@ -930,7 +949,7 @@
             <div class="download-actions">
               <a
                 class="btn btn-primary"
-                href="https://github.com/SKYL4ST/Obumi/releases/download/v1.0.0/Obumi.Setup.1.0.0.exe"
+                href="https://github.com/SKYL4ST/Obumi/releases/download/v1.0.0/Obumi.zip"
                 rel="noopener noreferrer"
                 aria-label="Télécharger Obumi pour Windows (installateur .exe)"
               >
@@ -942,6 +961,9 @@
                 </svg>
                 Télécharger
               </a>
+              <p class="download-note">
+                Après téléchargement : clic droit sur le fichier → Propriétés → coche Débloquer → OK, puis lance l'installation.
+              </p>
             </div>
           </div>
         </div>
